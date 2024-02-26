@@ -1,3 +1,8 @@
 body {
   text-align: center;
 }
+
+.cric_images {
+  height: 200px;
+  width: 200px;
+}
