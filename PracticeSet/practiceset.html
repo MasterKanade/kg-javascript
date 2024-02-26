@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Variables_Practice Set</title>
+  </head>
+  <body>
+    <h1 id="firstname"></h1>
+    <h3 id="evalmethod"></h3>
+    <script>
+      let firstName = "Mayur";
+      console.log(firstName); /* printing variable to the console */
+
+      document.querySelector("#firstname").innerText =
+        firstName; /* printing the variable on webpage */
+
+      const GST = 118 / 100; /* making GST value as a constant */
+      let bagPrice = 15599 - (10 / 100) * 15599 - 272;
+      let jeansPrice = 2499 - (41 / 100) * 2499 - 29;
+      let bagValue = Math.round((bagPrice + jeansPrice + +25 + 20) * GST);
+      let bagSummary = `Your Final Myntra Bag Amount is: ₹ ${bagValue}`;
+      console.log(bagSummary); /* printing the bagSummary on console */
+
+      let voteCount;
+      voteCount = "45 + 90";
+      console.log(voteCount);
+      let evaluate;
+      evaluate = "Eval method applied: " + eval(voteCount);
+      console.log(evaluate);
+      document.querySelector("#evalmethod").innerText = evaluate;
+    </script>
+  </body>
+</html>
