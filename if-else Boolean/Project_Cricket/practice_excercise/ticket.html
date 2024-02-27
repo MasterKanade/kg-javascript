@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ticket Filteration</title>
+  </head>
+  <body>
+    <script>
+      //let isAge, isGender;
+      //let discount;
+      //isAge = 4;
+      //isGender = "male";
+      //if (isGender == "female") {
+      //  console.log("50% Discount on the ticket");
+      //}
+
+      //if (isAge >= 65 && isGender != "female") {
+      //  console.log("30% Discount");
+      //} else if (isAge <= 12 && isAge >= 8 && isGender != "female") {
+      //  console.log("Half Ticket.");
+      //} else if (isAge < 8 && isGender != "female") {
+      //  console.log("Ticket is free");
+      //} else {
+      //  if (isGender != "female") {
+      //    console.log("Normal Ticket");
+      //  } else {
+      //    console.log("Congratulations On Your Discount Lady");
+      //  }
+      //}
+
+      let age = 21;
+      let gender = "female";
+      let finalDiscount;
+
+      if (age <= 5) {
+        finalDiscount = 100;
+      } else if (gender === "female" || age <= 8) {
+        finalDiscount = 50;
+      } else if (age >= 65) {
+        finalDiscount = 30;
+      } else {
+        finalDiscount = 0;
+      }
+
+      console.log(`Your Final Disount is: ${finalDiscount}`);
+    </script>
+  </body>
+</html>
