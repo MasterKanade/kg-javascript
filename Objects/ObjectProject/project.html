@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Object Project</title>
+  </head>
+  <body>
+    <script>
+      /*  let a, b;
+      a = 5;
+      b = a;
+      console.log(`a= ${a} , b= ${b}`);
+      a = 10;
+      console.log(`a= ${a} , b= ${b}`);
+
+      let x = { num: 5 };
+      let y = x;
+      console.log(
+        `The value of x and y before pointing to the reference: x: ${x.num} and y: ${y.num}`
+      );
+      y.num = 10; // either you can change x value or y value both are the same to point the reference.
+      console.log(
+        `The value of x and y after pointing to the reference: x: ${x.num} and y: ${y.num}`
+      );
+
+      let prompts = {
+        message: "good job",
+        status: "complete",
+        isIdenticalProduct: function () {},
+      };
+
+      let { message } = prompts;
+      let { status } = prompts;
+
+      console.log(message);
+      console.log(status); */
+
+      let myntraProduct = {
+        company: "Adidas",
+        size: 7,
+        color: "black",
+        type: "Jogging Shoes",
+        "delivery-time": "one day delivery",
+      };
+
+      let copy_myntraProduct = myntraProduct;
+      console.log(myntraProduct);
+      copy_myntraProduct.company = "NIke";
+      console.log(myntraProduct);
+      copy_myntraProduct.color = "Blue";
+      console.log(myntraProduct);
+
+      console.log(myntraProduct["delivery-time"]); // this is called bracket notation to access string objects.
+
+      let userMessage = {
+        message: "Good Job",
+        status: "Complete!!!",
+      };
+
+      console.log(userMessage); // just displaying the userMessage.
+
+      let { message, status } = userMessage; // this is called object destructuring.
+      console.log(message, status); // access operator . is not required to access the objects.
+
+      let product = {
+        company: "Adidas",
+        size: 7,
+        color: "black",
+        type: "Jogging Shoes",
+        "delivery-time": "one day delivery",
+      };
+
+      let product2 = {
+        company: "Adidas",
+        size: 8,
+        color: "black",
+        type: "Jogging Shoes",
+        "delivery-time": "one day delivery",
+      };
+
+      let product3 = {
+        company: "Adidas",
+        size: 8,
+        color: "black",
+        type: "Jogging Shoes",
+        "delivery-time": "one day delivery",
+      };
+
+      function isIdenticalProduct(product1, product2) {
+        if (typeof product1 !== "object" || typeof product2 !== "object") {
+          console.warn(`Parameter passed was not an object`);
+          return false;
+        }
+
+        if (product1 == product2) {
+          return true;
+        }
+        if (
+          product1.company === product2.company &&
+          product1.size === product2.size &&
+          product1.color === product2.color &&
+          product1.type === product2.type
+        ) {
+          return true;
+        } else {
+          return false;
+        }
+      }
+
+      console.log(isIdenticalProduct(product, "")); // false
+      console.log(isIdenticalProduct(product, product)); // true
+      console.log(isIdenticalProduct(product, product2)); // false
+      console.log(isIdenticalProduct(product3, product2)); // true
+      console.log(isIdenticalProduct(product2, product3)); // true
+    </script>
+  </body>
+</html>

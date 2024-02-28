@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JSOsN Format</title>
+  </head>
+  <body>
+    <script>
+      /*  let product = {
+        name: "Mango",
+        price: 786,
+        size: "M",
+        ratings: {
+          noOfReviews: 1000,
+          stars: 4.2,
+        },
+      };
+
+      console.log("The below is the JS Object");
+      console.log(product); // javascript object
+      console.log("Checking the typeof given object");
+      console.log(typeof product); // javascript object
+
+      let str = JSON.stringify(product); // conversion of JS object into JSON data format
+      console.log(`object converted into JSON format:  ${str}`); // string represenation
+      console.log("Checking the typeof stored JSON format");
+      console.log(typeof str); // string format.
+
+      let toObj = JSON.parse(str); // conversion of string into JS object.
+      console.log(typeof toObj);
+      console.log(`JSON converted into Javascript Object:`); // converted again into JS Object.
+      console.log(toObj); */
+
+      let product = {
+        name: "Mango",
+        price: 786,
+        size: "M",
+        ratings: {
+          noOfReviews: 1000,
+          stars: 4.2,
+        },
+      };
+
+      //localStorage.setItem("Name", "Mayur Kanade");
+      //localStorage.setItem("EmployeeOf", "Google");
+      //
+      //console.log(localStorage.getItem("Name"));
+      //console.log(localStorage.getItem("EmployeeOf"));
+      //
+      //localStorage.setItem("product", JSON.stringify(product));
+      console.log(localStorage.getItem("product"));
+
+      let product2 = JSON.parse(localStorage.getItem("product"));
+      console.log(product2);
+
+      localStorage.removeItem("EmployeeOf"); // the employeeof key will be removed from the local storage.
+      localStorage.clear(); // It will remove all the data from localstorage. (All keys will be remvoved)
+    </script>
+  </body>
+</html>
