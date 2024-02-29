@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PracticeExcercise</title>
+    <link
+      rel="stylesheet"
+      href="/JSON DOM Local Storage/PracticeExcercise/practice.css"
+    />
+    <style>
+      #clicked-button {
+        height: 50px;
+        width: 50px;
+        font-size: 25px;
+        border-radius: 10px;
+      }
+
+      .js-odd {
+        background-color: chocolate;
+      }
+
+      .js-even {
+        background-color: lawngreen;
+      }
+    </style>
+  </head>
+  <body>
+    <h3 id="greeting"></h3>
+
+    <button id="clicked-button" onclick="buttonPressed();">0</button>
+
+    <!-- <button
+      id="pressed-button"
+      onclick="
+    let total_count=0;
+    total_count++;
+    function checkVisits(total_count){
+      finalCount = total_count;
+    }    
+    
+    "
+    >
+      Click Me
+    </button> -->
+    <script>
+      let noOfTimesClicked = localStorage.getItem("noOfTimesClicked") || 0;
+      function buttonPressed() {
+        noOfTimesClicked++;
+        localStorage.setItem("noOfTimesClicked", noOfTimesClicked);
+        updateButton();
+      }
+
+      function updateButton() {
+        let button = document.querySelector("#clicked-button");
+        if (noOfTimesClicked % 2 == 0) {
+          button.classList.remove("js-odd");
+          button.classList.add("js-even");
+        } else {
+          button.classList.remove("js-even");
+          button.classList.add("js-odd");
+        }
+        button.innerText = noOfTimesClicked;
+      }
+
+      updateButton();
+
+      function doGreeting(name = "Dear") {
+        let date = new Date();
+        // console.log(date);
+        let hours = date.getHours();
+        //let hours = 18;
+        // console.log(hours);
+        let heading = document.querySelector("#greeting");
+
+        if (hours > 5 && hours < 12) {
+          heading.innerText = `Good Morning! ${name}`;
+        } else if (hours > 12 && hours < 18) {
+          heading.innerText = `Good Afternoon! ${name}`;
+        } else {
+          heading.innerText = `Good Night ${name}`;
+        }
+      }
+
+      doGreeting(); // if name is not passed in the argument itwill take default as a Dear.
+      doGreeting("Mayur"); // after passing the argument.
+
+      /* ==================================================================================================== */
+      /*      function checkHours(name) {
+        name = "Mayur";
+        let currentHour = new Date();
+        let checkHour = currentHour.getHours();
+        if (checkHour == 0 && checkHour <= 12) {
+          return `it's ${checkHour} now, Good Morning India!!! ${name}`;
+        } else if (checkHour > 12 && checkHour <= 16) {
+          return `it's ${checkHour} now, Good Afternoon ${name}`;
+        } else if (checkHour > 16 && checkHour <= 19) {
+          return `it's ${checkHour} now, Good Evening. ${name}`;
+        } else {
+          return `it's ${checkHour} now, Good Night! ${name}`;
+        }
+      }
+      console.log(checkHours()); */
+    </script>
+  </body>
+</html>
