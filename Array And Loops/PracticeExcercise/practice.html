@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Practice for the Array and Loops</title>
+  </head>
+  <body>
+    <script>
+      // 1.
+      let arr = [5, 6];
+      arr.unshift(4);
+      console.log(arr);
+      arr.push(7);
+      console.log(arr);
+
+      // 2.
+      function findPosition(number) {
+        let arr2 = [1, 5, 6, 8, 9, 10];
+        let arrElement = number;
+        /* if (arr2.includes(arrElement)) {
+          console.log("Element is in array");
+        } else {
+          console.log("Element not found");
+        }*/
+
+        for (let i = 0; i < arr2.length; i++) {
+          if (arr2[i] === arrElement) {
+            return `The Position of the Element is:  ${i}`;
+            break;
+          }
+        }
+        console.log("Not Found");
+      }
+      console.log(findPosition(6));
+      // 3.
+      let firstArr = ["Banana", "Apple", "Mango", "Papaya"];
+      let secondArr = firstArr.slice(0, firstArr.length);
+      secondArr.push("Chiku");
+      console.log(firstArr);
+      console.log(secondArr);
+
+      // 4. & 5
+
+      let primeNum = 0;
+      let primeCount = 0;
+      while (primeNum <= 25) {
+        if (primeNum % 2 == 0) {
+          let finalcount = primeCount++;
+          console.log(`This is final count: ${finalcount}`);
+          if (finalcount == 5) {
+            break;
+          }
+          console.log(primeNum);
+        }
+        primeNum++;
+      }
+      // 5.
+      for (let rev = 10; rev >= 0; rev--) {
+        console.log(rev);
+      }
+
+      console.log(
+        "=========== printing positive numbers only =================="
+      );
+
+      // 6
+      let postitiveArr = [1, -6, 5, 7, -8, 9, -10];
+      for (let pos = 0; pos < postitiveArr.length; pos++) {
+        if (postitiveArr[pos] < 0) {
+          continue;
+        }
+        console.log(postitiveArr[pos]);
+      }
+
+      console.log("=========== The last task ==================");
+      // 7
+      let strArr = ["KG", "Coding", "JavaScript", "Course", "is", "Best"];
+      console.log(strArr);
+      let concat = "";
+      for (let y = 0; y < strArr.length; y++) {
+        concat = concat + ` ` + strArr[y];
+      }
+      console.log(concat);
+    </script>
+  </body>
+</html>

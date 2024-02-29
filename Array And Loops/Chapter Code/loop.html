@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loop Types</title>
+  </head>
+  <body>
+    <script>
+      /* let num = 1; // initialization
+      while (num <= 10) {
+        // above is condition
+        console.log(num);
+        num++; // updation to reach out to the condition.
+      }
+      console.log("The final value of num is:" + num); // where condition false. */
+
+      //let newNum = 0; // Initialization
+      /*do {
+        console.log(newNum); // The task you're performing here executes at least once even though condition is awful
+        newNum++; // updation
+      } while (newNum <= 5); // condition defined until it is false. */
+
+      /*do {
+        console.log(`This executes atleast once.` + newNum);
+        newNum++;
+      } while (newNum > 5); */
+
+      /* do {
+        console.log(`This executes atleast once.` + newNum);
+        newNum++;
+      } while (false); */
+
+      // Note: if you forgot to update the value then it's Infinite loop will be created and which will
+      // produce high memory and system crash.
+
+      /*for (let num = 1; num <= 10; num++) {
+        // the one line declaration for all which is so good and effective.
+        console.log(num);
+      }*/
+
+      /* here how for loop works
+      1. initilization of value only once then moved to condition check
+      2. It will not go to updation, it will go to then to the body of execution where your logic is written.
+      3. Then it will check for the body and updates value.
+      4. until the condition is getting satisfied condition and update will occur again and again.
+      */
+
+      // Accumulator patterns
+      // 1. find the sum of all elements from given array.
+      /* let arr = [1, 2, 5, 9, 77, 100];
+      let sum = 0;
+      for (let i = 0; i < arr.length; i++) {
+        sum = sum + arr[i];
+      }
+      console.log(`The sum of all numbers in the array is:  ${sum}`);
+
+      // 2. Find the square numbers of all the elements in the array.
+      let arr2 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+      let square = [];
+      for (let i = 0; i < arr2.length; i++) {
+        square.push(arr2[i] * arr2[i]);
+        // square += arr2[i] * arr2[i];
+      }
+      console.log(`The squares of all the numbers:  ${square}`); */
+
+      // Break and Continue
+      // 1. Break Example for searching the value.
+      /* let arr = [1, 2, 3, 10, 77, 100, 8, 9, 55, 41, 23];
+      for (i = 0; i < arr.length; i++) {
+        if (arr[i] == 8) {
+          console.log("Value Found");
+          break;
+        }
+      } */
+
+      // Continue Example to print only odd numbers from 1 to 25
+
+      /* for (let i = 0; i <= 25; i++) {
+        if (i % 2 == 0) {
+          // to skip the even numbers from the list and only contiue with odd numbers
+          continue;
+        }
+        console.log(i);
+      } */
+    </script>
+  </body>
+</html>

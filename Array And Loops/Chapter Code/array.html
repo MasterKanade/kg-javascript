@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array Operations.</title>
+  </head>
+  <body>
+    <script>
+      let numbers = [1, 2, 3, 5, 9, 7, 6, 7, 3, 2, 10, 25, 75, 99, 45];
+      numbers.push(100); //  added the new element at the end in the right position.
+      console.log("Push:  " + numbers);
+      numbers.unshift(200); //  added the new element at the start in the left position.
+      console.log("Unshift:  " + numbers);
+      numbers.pop(); // removes the last element from the right position.
+      console.log("Pop:  " + numbers);
+      numbers.shift(); // removes the first element from the left position.
+      console.log("Shift:  " + numbers);
+
+      // checking the given array is array or not
+      let Personobj = {
+        name: "Mayur",
+        age: 26,
+      };
+      console.log(Array.isArray(Personobj)); // it will print false
+      console.log(Array.isArray(numbers)); // it will print true
+
+      // checking the typeof array, the type of array is not like our object which we defined Personobj.
+      console.log(`Typeof Array is:  ` + typeof numbers);
+
+      // Sorting the elements of the Array
+      console.log(numbers.sort());
+
+      // Destructuring of the Array
+
+      let [a, b, c, d] = numbers;
+      console.log("The value of a is: " + a); // we don't needed an . access operator to access the element
+      console.log("The value of b is: " + b);
+      console.log("The value of c is: " + c);
+      console.log("The value of d is: " + d);
+    </script>
+  </body>
+</html>
