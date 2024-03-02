@@ -27,6 +27,14 @@
       };
       buttonElement.addEventListener("click", behaviour);
 
+      let printDate = (event) => {
+        let storeDate = new Date();
+        localStorage.setItem("clickTimeandDate", storeDate);
+        console.log(storeDate);
+      };
+
+      buttonElement.addEventListener("click", printDate);
+
       /*1. Anonumous Function 
 
       // let's create an anonymous function.
