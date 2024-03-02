@@ -16,27 +16,32 @@
     </style>
   </head>
   <body>
-    <button id="my-button">Click Me</button>
-    <span id="printDate"></span>
+    <!-- <button id="my-button">Click Me</button>
+    <span id="printDate"></span> -->
     <script>
-      let count = 0;
-      let buttonElement = document.querySelector("#my-button");
-      let behaviour = (event) => {
-        count++,
-          (buttonElement.innerHTML = count),
-          localStorage.setItem("buttonClicked", count);
-      };
-      buttonElement.addEventListener("click", behaviour);
+      let arrNum = [7, 5, 6, 8, 9];
+      arrNum.forEach(function (num) {
+        console.log(num);
+      }); // it will return all the elements.
 
-      let printDate = (event) => {
-        let storeDate = new Date();
-        localStorage.setItem("clickTimeandDate", storeDate);
-        let spanPrint = document.querySelector("#printDate");
-        spanPrint.innerHTML = storeDate;
-        console.log(storeDate);
-      };
+      //let count = 0;
+      //let buttonElement = document.querySelector("#my-button");
+      //let behaviour = (event) => {
+      //  count++,
+      //    (buttonElement.innerHTML = count),
+      //    localStorage.setItem("buttonClicked", count);
+      //};
+      //buttonElement.addEventListener("click", behaviour);
+      //
+      //let printDate = (event) => {
+      //  let storeDate = new Date();
+      //  localStorage.setItem("clickTimeandDate", storeDate);
+      //  let spanPrint = document.querySelector("#printDate");
+      //  spanPrint.innerHTML = storeDate;
+      //  console.log(storeDate);
+      //};
 
-      buttonElement.addEventListener("click", printDate); // second event declared on the button.
+      //buttonElement.addEventListener("click", printDate); // second event declared on the button.
 
       /*1. Anonumous Function 
 
