@@ -20,9 +20,23 @@
     <span id="printDate"></span> -->
     <script>
       let arrNum = [7, 5, 6, 8, 9];
-      arrNum.forEach(function (num) {
-        console.log(num);
-      }); // it will return all the elements.
+
+      function search(arr, num) {
+        for (let i = 0; i < arr.length; i++) {
+          if (arr[i] === num) {
+            console.log(`Element found at location: ${i}`);
+            return; // if the number found it will come out of the loop and will not continue for the
+            // next element in the array.
+          }
+          console.log(`The number ${num} not found in the array.`);
+        }
+      }
+
+      search(arrNum, 10);
+
+      //arrNum.forEach(function (num) {
+      //  console.log(num);
+      //}); // it will return all the elements.
 
       //let count = 0;
       //let buttonElement = document.querySelector("#my-button");
