@@ -4,9 +4,29 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Advanced Code</title>
+    <style>
+      #my-button {
+        height: 100px;
+        width: 100px;
+        border: none;
+        border-radius: 10px;
+        font-size: 25px;
+        background-color: aqua;
+      }
+    </style>
   </head>
   <body>
+    <button id="my-button">Click Me</button>
     <script>
+      let count = 0;
+      let buttonElement = document.querySelector("#my-button");
+      let behaviour = (event) => {
+        count++,
+          (buttonElement.innerHTML = count),
+          localStorage.setItem("buttonClicked", count);
+      };
+      buttonElement.addEventListener("click", behaviour);
+
       /*1. Anonumous Function 
 
       // let's create an anonymous function.
@@ -97,9 +117,9 @@
 
       // Clear the interval after 5 seconds.
 
-      let alarm = () => console.log(`Hello Everyone , today is ${new Date()}`);
+      /*let alarm = () => console.log(`Hello Everyone , today is ${new Date()}`);
       let intervalID = setInterval(alarm, 1000);
-      setTimeout(() => clearInterval(intervalID), 5000);
+      setTimeout(() => clearInterval(intervalID), 5000);*/
     </script>
   </body>
 </html>
