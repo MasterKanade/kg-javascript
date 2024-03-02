@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Advanced Code</title>
+  </head>
+  <body>
+    <script>
+      /*1. Anonumous Function 
+
+      // let's create an anonymous function.
+      let sum = function (num1, num2) {
+        return num1 + num2;
+      };
+
+      // testCases:
+      //console.log(sum(4, 5)); // output will be 9
+      //console.log(typeof sum); // output will be function
+
+      // Using Anonymous function as an argument in another function
+      // let add 3 numbers using one function and take the help of sum function as an argument.
+
+      let sumThreeNumbers = function (num1, num2, num3, sumTwoNumbers) {
+        let sumResult = sumTwoNumbers(num1, num2);
+        return sumResult + num3;
+      };
+
+      // Now here while calling the method we will pass above sum function as an argument.
+      console.log(sumThreeNumbers(4, 5, 6, sum)); */
+
+      /* Arrow Functions  */
+      // where the arrow functions are the shorhands for the javascript funcitons.
+      // Following will describe how the arrow functions will be used.
+
+      // 1. function with two parameters.
+      /* let sum = function (num1, num2) {
+        return num1 + num2;
+      };
+
+      // 2. two parameter function using arrow function
+      let sumArrow = (num1, num2) => {
+        return num1 + num2;
+      };
+
+      // 2.1 if you're using arrow function then no need to use return statement in it as well as curly braces.
+      let sumArrowNoReturn = (num1, num2) => num1 + num2;
+
+      // 2.2 if you're using a single argument round brackes are optional
+      let square = (num) => num * num;
+
+      console.log(sum(4, 5));
+      console.log(sumArrow(5, 5));
+      console.log(sumArrowNoReturn(10, 10));
+      console.log(square(5)); */
+
+      // setTimeout and setInterval functions
+      // 1. setTimeout function.
+      /*  let alarm = function () {
+        console.log("this will run after some time");
+      };
+      console.log("Before Alarm");
+      setTimeout(alarm, 2000); */
+
+      // alarm as a single arugment.
+      /* let alarm = () => console.log("Hello print me after 2 Secs");
+      console.log("Before Alarm");
+      setTimeout(alarm, 2000); */
+
+      // Or you can directly add anonymous arrow function into the setTimeout.
+      /*console.log(
+        "Anonumous function added to setTimeout directly without a variable name"
+      );
+      setTimeout(() => console.log("Hello print me after the 2 secs"), 2000); */
+
+      /* let timerID = setTimeout(
+        () => console.log("Hello print me after the 2 secs"),
+        2000
+      );
+      console.log(`The timer id for the above is: ${timerID}`); */
+
+      // clear the setTimeout using clearTimeout() function
+
+      /* let timerID = setTimeout(
+        () => console.log("This will be printed after 10 seconds"),
+        10000
+      );
+
+      console.log(`Timer ID for the timerID is: ${timerID}`);
+
+      clearTimeout(timerID); // now setTimeout will be cancelled and it will not executed after 10 seconds. */
+
+      // 2. setInterval() : repeat something after sometime.
+      /*let alarm = () => console.log("Repeat this after every 1 secs.");
+      let intervalId = setInterval(alarm, 1000);
+      clearInterval(intervalId); */
+
+      // Clear the interval after 5 seconds.
+
+      let alarm = () => console.log(`Hello Everyone , today is ${new Date()}`);
+      let intervalID = setInterval(alarm, 1000);
+      setTimeout(() => clearInterval(intervalID), 5000);
+    </script>
+  </body>
+</html>
