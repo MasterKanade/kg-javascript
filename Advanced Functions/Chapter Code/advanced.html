@@ -21,18 +21,25 @@
     <script>
       let arrNum = [7, 5, 6, 8, 9];
 
-      function search(arr, num) {
-        for (let i = 0; i < arr.length; i++) {
-          if (arr[i] === num) {
-            console.log(`Element found at location: ${i}`);
-            return; // if the number found it will come out of the loop and will not continue for the
-            // next element in the array.
-          }
-          console.log(`The number ${num} not found in the array.`);
+      arrNum.forEach((num) => {
+        if (num === 5) {
+          return; // here forEach return act as a continue; and will continue for the next each element of the array and skipping the number 5.
         }
-      }
+        console.log(`Visits every element of the Array: ${num}`);
+      });
 
-      search(arrNum, 10);
+      //function search(arr, num) {
+      //  for (let i = 0; i < arr.length; i++) {
+      //    if (arr[i] === num) {
+      //      console.log(`Element found at location: ${i}`);
+      //      return; // if the number found it will come out of the loop and will not continue for the
+      //      // next element in the array.
+      //    }
+      //    console.log(`The number ${num} not found in the array.`);
+      //  }
+      //}
+      //
+      //search(arrNum, 10);
 
       //arrNum.forEach(function (num) {
       //  console.log(num);
