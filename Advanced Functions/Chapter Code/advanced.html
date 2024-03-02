@@ -19,14 +19,32 @@
     <!-- <button id="my-button">Click Me</button>
     <span id="printDate"></span> -->
     <script>
-      let arrNum = [7, 5, 6, 8, 9];
+      let arr = [1, 2, 3, 4, 5];
+      let squares = arr.map((num) => num * num);
+      console.log(squares);
 
-      arrNum.forEach((num) => {
-        if (num === 5) {
-          return; // here forEach return act as a continue; and will continue for the next each element of the array and skipping the number 5.
+      /* let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+      let odds = arr.filter((num, index) => {
+        if (num % 2 === 1) {
+          return true;
+        } else {
+          return false;
         }
-        console.log(`Visits every element of the Array: ${num}`);
       });
+      console.log(odds);
+
+      // or
+      let newOdds = arr.filter((num, index) => num % 2 === 1);
+      console.log(newOdds); */
+
+      //let arrNum = [7, 5, 6, 8, 9];
+      //
+      //arrNum.forEach((num) => {
+      //  if (num === 5) {
+      //    return; // here forEach return act as a continue; and will continue for the next each element of the //array and skipping the number 5.
+      //  }
+      //  console.log(`Visits every element of the Array: ${num}`);
+      //});
 
       //function search(arr, num) {
       //  for (let i = 0; i < arr.length; i++) {
@@ -64,7 +82,7 @@
 
       //buttonElement.addEventListener("click", printDate); // second event declared on the button.
 
-      /*1. Anonumous Function 
+      /*1. Anonumous Function
 
       // let's create an anonymous function.
       let sum = function (num1, num2) {
